@@ -35,7 +35,7 @@ const Filter = () => {
         <Form className="d-flex nv-search">
           <input
             type="text"
-            placeholder="Search product.."
+            placeholder="Search product by Colour..."
             className="me-2 sm nv-input"
             aria-label="Search"
          
