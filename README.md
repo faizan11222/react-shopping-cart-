@@ -1,23 +1,23 @@
 # react-shopping-cart-
 
-#for dependencies
+# for dependencies
 
 
-*npm install*
+'npm install'
 
 #for starting
 
-*npm start*
+'npm start'
 
-#for full app testing (using jest)
-
-
-*npm test*
-
-#for web link
+# for full app testing (using jest)
 
 
-localhost:3000
+'npm test'
+
+# for web link
+
+
+'localhost:3000'
 
 
 Enjoy :)
