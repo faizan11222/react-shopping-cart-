@@ -3,21 +3,21 @@
 # for dependencies
 
 
-'''npm install'''
+npm install
 
 #for starting
 
-'npm start'
+npm start
 
 # for full app testing (using jest)
 
 
-'npm test'
+npm test
 
 # for web link
 
 
-'localhost:3000'
+localhost:3000
 
 
 Enjoy :)
