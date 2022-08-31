@@ -3,7 +3,7 @@
 # for dependencies
 
 
-'npm install'
+'''npm install'''
 
 #for starting
 
