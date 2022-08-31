@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../redux/actions/productActions";
 import { RootStateType } from "../../redux/reducers/rootReducer";
@@ -7,11 +5,8 @@ import { ProductType } from "../../types";
 import formatCurrency from "../../utilities";
 import "./Cart.css";
 import CartItem from "./CartItem";
-import CreateOrder from "./CreateOrder";
 
 const Cart = () => {
-  const [showCheckoutForm, setShowCheckoutForm] = useState<boolean>(false);
-
   const dispatch = useDispatch();
   const cartItems = useSelector(
     (state: RootStateType) => state.productReducer.cartItems
@@ -52,12 +47,8 @@ const Cart = () => {
                   cartItems.reduce((a, b) => a + b.price * b.inCartQuantity!, 0)
                 )}
               </div>
-            
             </div>
           </div>
-          {showCheckoutForm && ( // if showCheckoutForm is true, show the form
-            <CreateOrder origin="homepage" />
-          )}
         </div>
       )}
     </div>

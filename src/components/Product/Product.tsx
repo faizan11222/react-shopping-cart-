@@ -1,6 +1,5 @@
 import { Fade } from "react-awesome-reveal";
 import { Button } from "react-bootstrap";
-import StarRatings from "react-star-ratings";
 
 import { ProductType } from "../../types";
 import formatCurrency from "../../utilities";
@@ -9,7 +8,7 @@ import "./Product.css";
 const Product = ({
   product,
   handleAddToCart,
-  openModal,
+ 
 }: {
   product: ProductType;
   handleAddToCart: (product: ProductType) => void;
@@ -20,21 +19,14 @@ const Product = ({
       <li>
         <div className="product">
           <a href={"#" + product.id}>
-            <img
-              src={product.img}
-              alt={product.name}
-              
-            />{" "}
-            <br /> <br />
-            <p >{product.name}</p>
-            
+            <img src={product.img} alt={product.name} /> <br /> <br />
+            <p>{product.name}</p>
           </a>
 
-          <div >
-              <h2>{product.colour}</h2>
-             
-            </div>
-            
+          <div>
+            <h2>{product.colour}</h2>
+          </div>
+
           <div className="product-price">
             <div>{formatCurrency(product.price)}</div>
             <Button

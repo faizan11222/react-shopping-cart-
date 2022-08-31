@@ -1,26 +1,10 @@
-import { useEffect } from "react";
-import { BsCartDash, BsCartPlus } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import Toggle from "react-toggle";
-
-import { getProductsAsync } from "../../redux/actions/productActions";
-import { RootStateType } from "../../redux/reducers/rootReducer";
-import { darkModeType } from "../../types";
 
 import Cart from "../Cart/Cart";
 import Filter from "../Filter/Filter";
 import Products from "../Products/Products";
 
-const Home = ({ toggleDarkMode, darkMode }: darkModeType) => {
-  const dispatch = useDispatch();
-  const cart = useSelector(
-    (state: RootStateType) => state.productReducer.cartItems
-  );
+const Home = () => {
 
-  useEffect(() => {
-    dispatch(getProductsAsync());
-  }, [dispatch]);
 
   return (
     <div className="app-container">
@@ -28,10 +12,7 @@ const Home = ({ toggleDarkMode, darkMode }: darkModeType) => {
         <div>
           <a href="/"> React Shopping Cart</a>
         </div>
-        <div>
-        
-         
-        </div>
+        <div></div>
       </header>
       <main>
         <div className="content">
@@ -44,7 +25,6 @@ const Home = ({ toggleDarkMode, darkMode }: darkModeType) => {
           </div>
         </div>
       </main>
-    
     </div>
   );
 };

@@ -21,7 +21,7 @@ const CartItem = ({
           <div className="cart-right">
             {formatCurrency(cartItem.price)} x {cartItem.inCartQuantity}
             <Button
-              style={{ marginLeft: "15px" }}
+              id="btn-cart"
               variant="outline-danger"
               onClick={() => handleRemoveFromCart(cartItem)}
             >
